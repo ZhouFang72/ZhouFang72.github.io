@@ -1,0 +1,12 @@
+h1{
+    color:rgb(71, 154, 226);
+}
+#p5Canvas{
+  width: 1200px;
+  height: 600px;
+  border: 5px solid rgb(245, 121, 4);
+  margin: 25px;
+}
+p{
+  color: rgb(65, 128, 223);
+}
