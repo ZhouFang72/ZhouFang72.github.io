@@ -1,15 +1,20 @@
 function setup(){
-    let canvas = createCanvas(1200,600);
+    let canvas = createCanvas(windowWidth,windowHeight);
     canvas.parent('p5Canvas');
+    noStroke();
+    colorMode(HSB);
 }
+  
 function draw(){
-    if (mouseIsPressed){
-        fill('#EB4F00');
-        stroke('#00D5D7');
-    }else{
-        fill('#EB4FA5');
-        stroke('#8BFF59');
-    }
-    ellipse(mouseX,mouseY,80,80);
-
+    let lefthue = map(mouseX,0,width,0,360);
+    let righthue = (lefthue + 180) % 360;
+    fill(lefthue,100,100);
+    rect(0,0,width/2,height);
+    fill(righthue,100,100);
+    rect(width/2,0,width/2,height);
+  
 }
+function windowResized(){
+    resizeCanvas(windowWidth,windowHeight);
+}
+  
